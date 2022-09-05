@@ -5,7 +5,7 @@
   "main": "./src/bin/index.js",
   "scripts": {
     "start": "node ./node_modules/.bin/pm2-runtime ./src/bin",
-    "dev": "NODE_ENV=development DEBUG=bon-appetit-api:* nodemon ./src/bin/index.js"
+    "dev": "cross-env NODE_ENV=development DEBUG=bon-appetit-api:* nodemon ./src/bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "pm2": "^3.2.9"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "debug": "^4.1.1",
     "dotenv": "^6.2.0",
     "nodemon": "^1.18.4"
